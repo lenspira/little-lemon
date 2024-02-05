@@ -6,6 +6,7 @@
   --highlight-1: #EDEFEE;
   --highlight-2: #333;
   --white: #fff;
+  --black: #000;
 }
 
 * {
@@ -17,12 +18,26 @@ body {
   font-family: 'Karla', sans-serif;
 }
 
-ul {
-  list-style: none;
+h1 {
+  font-family: 'Markazi Text';
+  font-weight: 500;
+  font-size: 64px;
 }
 
-.py-2 {
-  padding: 2rem 0;
+h2 {
+  font-family: 'Markazi Text';
+  font-weight: 400;
+  font-size: 40px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 65ch;
+}
+
+ul {
+  list-style: none;
 }
 
 .container {
@@ -32,11 +47,105 @@ ul {
   overflow: hidden;
 }
 
+.flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* CTA Button Component */
+.btn {
+  display: inline-block;
+  border: none;
+  font-family: 'Karla';
+  font-weight: 500;
+  font-size: 18px;
+  padding: 0.5rem 1.5rem;
+  color: var(--black);
+  border-radius: 18px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.btn-primary {
+  background-color: var(--primary-2);
+}
+
+/* Dish Card Component */
+.dish-item {
+  background-color: var(--highlight-1);
+  border-radius: 16px;
+}
+
+.dish-item img {
+  width: 100%;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.dish-text-master {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+}
+
+.dish-text-container {
+  padding: 20px 20px 30px;
+}
+
+
+.dish-title-container {
+  padding-bottom: 30px;
+}
+
+.dish-title-container span {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--secondary-1);
+}
+
+.dish-delivery-container {
+  padding: 0px 0px 30px 20px;
+}
+
+.dish-delivery-container a {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--black);
+  cursor: pointer;
+}
+
+.dish-delivery-container i {
+  margin-left: 5px;
+}
+
+/* Testimonial Card Component */
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial img {
+  width: 100px;
+  border-radius: 50%;
+  position: relative;
+  top: 50px;
+}
+
+.testimonial-text-container {
+  background-color: var(--highlight-1);
+  border-radius: 16px;
+  padding: 60px 20px 20px;
+}
+
+/* Navbar */
 #navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1rem;
+  padding: 1rem 0;
 }
 #navbar ul {
   display: flex;
@@ -49,27 +158,149 @@ ul {
 #navbar a {
   text-decoration: none;
   color: var(--highlight-2);
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 500;
   border-bottom: 3px transparent solid;
   padding-bottom: 0.5rem;
   transition: border-color 0.5s;
 }
 
 #navbar a:hover {
-  border-color: var(--highlight-1);
+  border-color: var(--primary-1);
 }
 
 #navbar a.current {
   border-color: var(--primary-2);
 }
 
+/* Main Content */
 .main-content {
-  height: 500px;
+  height: 100%vh;
+}
+
+/* Hero Section */
+#main-hero {
+  background-color: var(--primary-1);
+}
+
+#main-hero .hero-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+
+#main-hero h1 {
+  color: var(--primary-2);
+}
+
+#main-hero h2 {
+  color: var(--white);
+  position: relative;
+  bottom: 20px;
+}
+
+#main-hero p {
+  color: var(--white);
+  margin-bottom: 30px;
+}
+
+#main-hero img {
+  border-radius: 16px;
+  width: 330px;
+  height: 360px;
+  position: absolute;
+  top: 12vh;
+  margin-left: 2%;
+}
+
+/* Specials Section */
+#main-specials {
+  margin-top: 100px;
+}
+
+#main-specials .specials-container-title {
+  padding-bottom: 30px;
+}
+
+#main-specials .specials-container-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+  padding-bottom: 60px;
+}
+
+/* Testimonials Section */
+#main-testimonials {
+  background-color: var(--primary-1);
+}
+
+#main-testimonials .testimonial-master {
+  padding: 60px 0;
+}
+
+#main-testimonials h2 {
+  color: var(--white);
+  text-align: center;
+}
+
+#main-testimonials .testimonials-container-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+  position: relative;
+  top: -5%
+}
+
+.testimonial-text-container p {
+  margin-bottom: 10px;
+}
+
+/* About Section */
+#main-about .about-section-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+}
+
+#main-about h2 {
+  position: relative;
+  bottom: 20px;
+}
+
+#main-about p {
+  margin-bottom: 30px;
+}
+
+.about-section-content-left {
+  padding-right: 4rem;
+}
+
+.about-section-content-right {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+#about-interior {
+  border-radius: 16px;
+  position: absolute;
+  top: 17%;
+  left: -5%;
+}
+
+#about-chefs {
+  border-radius: 16px;
+  position: relative;
+  left: 30%;
 }
 
 /* Footer */
 #main-footer {
   background: var(--highlight-1);
+  padding: 60px 0;
 }
 
 #main-footer h3 {
@@ -89,7 +320,7 @@ ul {
 
 #main-footer .footer-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr 1.5fr 1fr;
   grid-gap: 1.5rem;
 }
 

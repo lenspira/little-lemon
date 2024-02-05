@@ -1,8 +1,8 @@
-import logo from '../img/logo.svg';
+import logo from '../img/footerLogo.png';
 
 const Footer = (props) => {
     return (
-        <footer id="main-footer" className="py-2">
+        <footer id="main-footer">
             <div className="container footer-container">
                 <div>
                     <img src={logo} alt="Little Lemon Logo" id="footer-logo" />
@@ -23,7 +23,7 @@ const Footer = (props) => {
                     <ul>
                         <li>50 Main St, Chicago, IL 60637</li>
                         <li>(555) 123-4567</li>
-                        <li>inbox@littlelemon.com</li>
+                        <li>queries@littlelemon.com</li>
                     </ul>
                 </div>
                 <div className="social">
@@ -31,7 +31,6 @@ const Footer = (props) => {
                     <a href="#"><i className="fab fa-facebook fa-2x"></i></a>
                     <a href="#"><i className="fab fa-twitter fa-2x"></i></a>
                     <a href="#"><i className="fab fa-youtube fa-2x"></i></a>
-                    <a href="#"><i className="fab fa-linkedin fa-2x"></i></a>
                 </div>
             </div>
       </footer>
