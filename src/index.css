@@ -162,14 +162,14 @@ ul {
   font-weight: 500;
   border-bottom: 3px transparent solid;
   padding-bottom: 0.5rem;
-  transition: border-color 0.5s;
+  transition: border-color 0.2s;
 }
 
 #navbar a:hover {
   border-color: var(--primary-1);
 }
 
-#navbar a.current {
+#navbar a.active {
   border-color: var(--primary-2);
 }
 
@@ -331,4 +331,42 @@ ul {
 
 #main-footer img {
   width: 120px;
+}
+
+/* Booking Page */
+#booking-page {
+  background-color: var(--primary-1);
+}
+
+#booking-page h1 {
+  margin-top: 30px;
+  color: var(--primary-2);
+}
+
+#booking-page h2 {
+  position: relative;
+  bottom: 20px;
+  color: var(--white);
+}
+
+.booking-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Booking Form */
+#booking-form {
+  display: grid;
+  max-width: 300px;
+  gap: 20px;
+  padding: 30px;
+  background-color: var(--white);
+  margin: 20px 0 60px 0;
+  border-radius: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
 }
