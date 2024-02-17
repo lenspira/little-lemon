@@ -2,6 +2,13 @@
 
 > A course project app for a small restaurant, built with vanilla React.
 
+# Installation
+
+- Clone the project repository
+- Open the project folder in VSCode/other IDE
+- With the terminal open in the project directory, run "npm install"
+- Once complete, run "npm start"
+
 # Features
 
 - Home & Booking pages
