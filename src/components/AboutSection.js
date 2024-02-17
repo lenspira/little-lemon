@@ -1,7 +1,7 @@
-import aboutImg1 from '../img/about_interior.png';
-import aboutImg2 from '../img/about_chefs.png';
+import aboutImg1 from '../assets/about_interior.png';
+import aboutImg2 from '../assets/about_chefs.png';
 
-const AboutSection = (props) => {
+const AboutSection = () => {
     return (
         <div id="main-about">
             <div className="container about-section-container">

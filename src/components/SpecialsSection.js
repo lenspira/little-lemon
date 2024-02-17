@@ -1,16 +1,17 @@
+import { useNavigate } from "react-router-dom";
 import CTAButton from "./CTAButton";
 import Dish from "./Dish";
+import dishImg1 from "../assets/dish_greekSalad.png";
+import dishImg2 from "../assets/dish_bruchetta.png";
+import dishImg3 from "../assets/dish_lemonDessert.png";
 
-import dishImg1 from "../img/dish_greekSalad.png";
-import dishImg2 from "../img/dish_bruchetta.png";
-import dishImg3 from "../img/dish_lemonDessert.png";
-
-const SpecialsSection = (props) => {
+const SpecialsSection = () => {
+    const navigate = useNavigate();
     return (
         <div id="main-specials" className="container">
             <div className="specials-container-title flex-row">
                 <h2>This Week's Specials!</ h2>
-                <CTAButton title="Online Menu" />
+                <CTAButton title="Online Menu" onClick={() => navigate("/menu")} />
             </div>
             <div className="specials-container-grid">
                 <Dish

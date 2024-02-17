@@ -24,7 +24,7 @@ test('Renders the BookingForm heading', () => {
 
 test('BookingForm is submitted', () => {
     render(<BookingForm {...testProps} />);
-    fireEvent.submit(screen.getByRole('form'));
+    fireEvent.submit(screen.getByTestId('booking-form'));
     expect(testProps.handleFormSubmit).toHaveBeenCalled();
 });
 
@@ -35,8 +35,8 @@ test('initializeTimes returns the expected values', () => {
     expect(screen.getByText('19:00')).toBeInTheDocument();
 });
 
-test('updateTimes returns the same value that is provided in the state', () => {
-    const updateAction = {type: 'UPDATE'};
+test('updateTimes returns the new available times from the api', () => {
+    const updateAction = {type: 'UPDATE', payload: ['17:00', '18:30']};
     const updatedState = UpdateTimesReducer(testProps.availableTimes, updateAction);
-    expect(updatedState).toEqual(testProps.availableTimes);
-  });
+    expect(updatedState).toEqual(['17:00', '18:30']);
+});
